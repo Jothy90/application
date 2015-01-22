@@ -15,9 +15,6 @@ ser = serial.Serial(PORT, BAUD_RATE)
 # Create API object
 xbee = ZigBee(ser)
 
-client = mosquitto.Mosquitto('test-client-id')
-client.connect('192.248.10.70')
-
 # Continuously read and print packets
 while True:
     try:
@@ -36,8 +33,9 @@ while True:
         
         #f.close()
 
-
-       client.publish('test', dd[1])
+##       client = mosquitto.Mosquitto('test-client-id')
+##       client.connect('192.248.10.70')
+##       client.publish('test', response['rf_data'])
 ##       client.disconnect()
     except KeyboardInterrupt:
         break
