@@ -1,0 +1,4 @@
+Databse name : lawfirm
+
+usernaem :root
+password :
